@@ -48,7 +48,7 @@ $padding: 2rem;
         display: block;
         color: transparent;
         overflow: hidden;
-        animation: revealText 1s $total forwards;
+        animation: revealText 1s var(--total) forwards;
         &::after{
             content: '';
             position: absolute;
