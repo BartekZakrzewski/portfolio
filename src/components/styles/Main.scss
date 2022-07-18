@@ -43,7 +43,7 @@ $padding: 2rem;
     width: 100%;
     
     & span{
-        $total: calc($duration + $delay);
+        --total: calc($duration + $delay);
         position: relative;
         display: block;
         color: transparent;
@@ -60,9 +60,9 @@ $padding: 2rem;
             transform-origin: left;
             background: $bg-prime;
             animation: rollIn $duration $delay forwards,
-            rollOut $duration $total forwards;
+            rollOut $duration var(--total) forwards;
         }
-        &:nth-child(1)::after{
+        &::after{
             border-top: 3px solid $bg;
         }
     }
