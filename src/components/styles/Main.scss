@@ -1,9 +1,12 @@
 $bg: rgb(55, 82, 158);
 $bg-prime: rgb(42, 42, 78);
 $color: #fff;
-$duration: 1000ms;
-$delay: 500ms;
 $padding: 2rem;
+
+:root{
+    --duration: 1000ms;
+    --delay: 500ms;
+}
 
 .main{
     width: 100%;
@@ -29,7 +32,7 @@ $padding: 2rem;
     background-position: center;
     background-size: cover;
     color: $color;
-    font-size: calc($padding * 2);
+    font-size: 4rem;
     font-weight: 700;
     margin: 0;
     padding: 1rem;
@@ -43,7 +46,7 @@ $padding: 2rem;
     width: 100%;
     
     & span{
-        --total: calc($duration + $delay);
+        --total: calc(var(--duration) + var(--delay));
         position: relative;
         display: block;
         color: transparent;
@@ -59,8 +62,8 @@ $padding: 2rem;
             transform: scaleX(0);
             transform-origin: left;
             background: $bg-prime;
-            animation: rollIn $duration $delay forwards,
-            rollOut $duration var(--total) forwards;
+            animation: rollIn var(--duration) var(--delay) forwards,
+            rollOut var(--duration) var(--total) forwards;
         }
         &::after{
             border-top: 3px solid $bg;
