@@ -1,0 +1,89 @@
+$icon-size: 3rem;
+$react-icon: #61DBFB;
+$js-icon: #f7df1e;
+$after-height: 25px;
+$text: rgb(199, 199, 199);
+
+.projects{
+    margin-top: 100vh;
+    background-color: black;
+    color: white;
+    background-image: url(./assets/dark-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 1rem;
+}
+
+.project{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+    .text{
+        color: $text;
+        cursor: default;
+    }
+    svg{
+        font-size: $icon-size;
+    }
+    .git, .site{
+        color: white;
+        text-decoration: none;
+        height: $after-height;
+    }
+    .site::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: $after-height;
+        left: 0;
+        background-color: #fff;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+    .git::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+    .git:hover::after, .site:hover::after{
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}
+
+.react{
+    svg{
+        color: $react-icon;
+    }
+}
+
+.js{
+    svg{
+        color: $js-icon;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .projects{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        position: relative;
+    }
+}
