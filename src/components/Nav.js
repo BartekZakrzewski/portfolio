@@ -1,10 +1,11 @@
 import React from 'react'
+import Scrollspy from 'react-scrollspy'
 
 const Nav = (props) => {
   return (
-    <ul className={`${props.cl}`}>
-        { props.children }
-    </ul>
+    <Scrollspy items={ ['home', 'projects', 'contact'] } currentClassName="active" className={ `${props.cl}` }>
+      { props.children }
+    </Scrollspy>
   )
 }
 

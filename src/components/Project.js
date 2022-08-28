@@ -6,11 +6,8 @@ const Project = (props) => {
         <div className={`${ props.cl }`}>
             { props.icon }
         </div>
-        <span className='text'>
-            { props.text }
-        </span>
         <a href={`${ props.websitehref }`} target="_about:blank" className='site'>
-            Project Website
+            { props.text }
         </a>
         <a href={`${ props.githubhref }`} target="_about:blank" className='git'>
             GitHub Repository

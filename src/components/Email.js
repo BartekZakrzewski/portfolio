@@ -19,15 +19,15 @@ function Email() {
     <form ref={form} onSubmit={sendEmail}>
         <div className="name">
             <label>Name</label>
-            <input type="text" name="user_name" id='Name' required/>
+            <input type="text" name="user_name" id='Name' placeholder='Name' required/>
         </div>
         <div className="email">
             <label>Email</label>
-            <input type="email" name="user_email" id='Email' required/>
+            <input type="email" name="user_email" id='Email' placeholder='Email' required/>
         </div>
         <div className="message">
             <label>Message</label>
-            <textarea name="message" id='Message' required/>
+            <textarea name="message" id='Message' placeholder='Message' required/>
         </div>
         <div className="submit">
             <input type="submit" value="Send" className='send' />

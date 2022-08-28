@@ -5,17 +5,12 @@ import { FaDiscord } from 'react-icons/fa';
 
 const Contact = (props) => {
   return (
-    <div className="contact section" id='contact'>
+    <div className="contact" id='contact'>
         <h1 className='email-me'>
           Email Me!
         </h1>
         { props.children }
         <ul className='other-contacts'>
-          <li>
-            <h2 className='socialmedia'>
-              Social media
-            </h2>
-          </li>
           <li className='other-link'>
             <a href="https://www.facebook.com/bartek.zakrzewski.923/" className="facebook" target={'_about:blank'}>
               <FaFacebook />
