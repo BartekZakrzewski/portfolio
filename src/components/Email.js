@@ -1,8 +1,10 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 function Email() {
   const form = useRef();
+  const [sent, setSent] = useState(false);
+  const [err, setErr] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -10,8 +12,16 @@ function Email() {
     emailjs.sendForm('service_450jizu', 'template_5676evo', form.current, 'eJjg2wqADZIE-SbT6')
       .then((result) => {
           console.log(result.text);
+          setSent(true);
+          setTimeout(() => {
+            setSent(false);
+          }, 1000);
       }, (error) => {
           console.log(error.text);
+          setErr(true);
+          setTimeout(() => {
+            setErr(false);
+          }, 1000);
       });
   };
 
@@ -31,6 +41,12 @@ function Email() {
         </div>
         <div className="submit">
             <input type="submit" value="Send" className='send' />
+            <div className={`succ`}>
+                {(sent && "Message sent succesfuly!")}
+            </div>
+            <div className={`err`}>
+                {(err && "Error...")}
+            </div>
         </div>
     </form>
   );

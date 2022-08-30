@@ -171,6 +171,16 @@ form{
     display: none;
 }
 
+.succ{
+    display: block;
+    color: #0a0;
+}
+
+.err{
+    display: block;
+    color: #a00;
+}
+
 @media screen and (max-width: 750px) {
     .contact{
         display: flex;

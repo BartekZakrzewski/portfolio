@@ -14,17 +14,15 @@ import { FaJsSquare } from 'react-icons/fa';
 import { BiDockTop } from 'react-icons/bi';
 import { FaReact } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
-import Scrollspy from 'react-scrollspy';
 
-function App() {
+const App = () => {
   const [isOpen, setOpen] = useState(false);
-  
 
   return (
     <div className="wrapper">
       <Header>
         <Logo/>
-        <Scrollspy items={ ['projects', 'contact'] } currentClassName="active" className={ `navbar ${isOpen && "get-menu"}` }>
+        <ul className={ `navbar ${isOpen && "get-menu"}` }>
           <li className='nav-item'>
             <a href={ '/' }>
                 Home
@@ -48,7 +46,7 @@ function App() {
                 <FaGithub />
             </a>
           </li>
-        </Scrollspy>
+        </ul>
         <button className={`menu-button ${isOpen && 'rotate'}`} onClick={() => setOpen(!isOpen)}>
           <FaChevronLeft />
         </button>
