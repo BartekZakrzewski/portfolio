@@ -9,7 +9,7 @@ function Email() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_450jizu', 'template_5676evo', form.current, 'eJjg2wqADZIE-SbT6')
+    emailjs.sendForm(process.env.REACT_APP_YOUR_SERVICE_ID, process.env.REACT_APP_YOUR_TEMPLATE_ID, form.current, process.env.REACT_APP_YOUR_PUBLIC_KEY)
       .then((result) => {
           console.log(result.text);
           setSent(true);
