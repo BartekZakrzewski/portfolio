@@ -14,6 +14,7 @@ import { FaJsSquare } from 'react-icons/fa';
 import { BiDockTop } from 'react-icons/bi';
 import { FaReact } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
+import { RiNextjsFill } from "react-icons/ri";
 
 const App = () => {
   const [isOpen, setOpen] = useState(false);
@@ -64,6 +65,13 @@ const App = () => {
             cl={'react'} 
           />
           <Project 
+            icon={<RiNextjsFill />} 
+            websitehref={'https://green-daily.vercel.app'} 
+            githubhref={'https://github.com/BartekZakrzewski/GreenDAILY'} 
+            text={'Green DAILY'} 
+            cl={'react'} 
+          />
+          <Project 
             icon={<FaReact />} 
             websitehref={'https://school-blog-presentation.vercel.app/'} 
             githubhref={'https://github.com/BartekZakrzewski/school-blog-presentation/tree/main'} 
@@ -72,18 +80,25 @@ const App = () => {
           />
           <Project 
             icon={<FaReact />} 
-            websitehref={'https://hangmn-tsx.stackblitz.io/'} 
-            githubhref={'https://github.com/BartekZakrzewski/hangman-tsx'} 
-            text={'Hangman'} 
+            websitehref={'https://citylab.life/'} 
+            githubhref={'https://github.com/BartekZakrzewski/pzakrzewski'} 
+            text={'CityLab'} 
             cl={'react'} 
           />
-          <Project 
-            icon={<FaReact />} 
-            websitehref={'https://sample-product-website-tsx.stackblitz.io'} 
-            githubhref={'https://github.com/BartekZakrzewski/sample-product-website-tsx'} 
-            text={'Sample Product Website'} 
-            cl={'react'} 
-          />
+          // <Project 
+          //   icon={<FaReact />} 
+          //   websitehref={'https://hangmn-tsx.stackblitz.io/'} 
+          //   githubhref={'https://github.com/BartekZakrzewski/hangman-tsx'} 
+          //   text={'Hangman'} 
+          //   cl={'react'} 
+          // />
+          // <Project 
+          //   icon={<FaReact />} 
+          //   websitehref={'https://sample-product-website-tsx.stackblitz.io'} 
+          //   githubhref={'https://github.com/BartekZakrzewski/sample-product-website-tsx'} 
+          //   text={'Sample Product Website'} 
+          //   cl={'react'} 
+          // />
           <Project 
             icon={<FaJsSquare />} 
             websitehref={'https://fliko-website.vercel.app/'} 
